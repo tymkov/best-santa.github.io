@@ -1,0 +1,1175 @@
+/*Обнуление*/
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+input,button,textarea{font-family:inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a, a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+/*--------------------*/
+
+
+@font-face {
+    font-family: 'PFAgoraSlabPro-Regular';
+    src: url('./scr/fonts/PF\ Agora\ Slab\ Pro\ Regular.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+@font-face {
+    font-family: 'PFAgoraSlabPro-Bold';
+    src: url("./scr/fonts/PF\ Agora\ Slab\ Pro\ Bold.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PFAgoraSlabPro-Light';
+    src: url("./scr/fonts/PFAgoraSlabPro\ Light.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url("./scr/fonts/Roboto-Black.ttf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+html, body {
+    height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.unselectable {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+  
+
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 60px;
+}
+
+.header__wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(243, 78, 56); 
+    box-shadow: 0 1px 10px #bf594b;
+}
+
+.header__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.headerMenu {
+
+}
+
+
+.headerMenu__list {
+    display: flex;
+}
+
+.headerMenu__item {
+    padding: 0 20px 0 0 ;
+}
+
+
+.headerMenu__link {
+    color: white;
+    font-size: 16px;
+    font-family: 'PFAgoraSlabPro-Regular';
+    padding: 8px 5px;
+    transition: 200ms;
+}
+
+.headerMenu__link:hover {
+    color: #ffe946;
+    transition: 200ms;
+}
+
+.header__contacts {
+    display: flex;
+    align-items: center;
+}
+
+.phoneWrapper {
+    padding: 0 30px 0 0;
+}
+
+.phone {
+    font-size: 24px;
+    color: white;
+    font-family: 'PFAgoraSlabPro-Bold';
+    letter-spacing: 0px;
+}
+
+.callButtonWrapper {
+
+}
+
+.callButton {
+    background-color: brown;
+    width: 200px;
+    height: 45px;
+    position: relative;
+    text-align: center;
+    border-radius: 30px;
+    line-height: 47px;
+    font-size: 17px;
+    color: white;
+    box-shadow: 0px 3px 2px darkred;
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+    transform: translateY(-1px);
+    display: block;
+}
+
+.callButton:hover {
+    background-color: tomato;
+    transition: 100ms;
+}
+
+.callButton:active {
+    background-color: lightsalmon;
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px darkred;
+}
+
+.main {
+    padding: 0;
+}
+
+.main__wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstPage {
+    padding-top: 60px;
+    min-height: 90vh;
+    background: url('./scr/img/firstPageSanta.jpg') center / cover no-repeat;
+    display: flex;
+}
+
+.firstPage__body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.firstPage__mainOfferWrapper {
+    width: 500px;
+
+}
+
+.firstPage__textTitle {
+    font-size: 60px;
+    font-family: 'Roboto';
+    color: white;
+    text-transform: uppercase;
+    padding: 0 50px 15px 0;
+}
+
+.firstPage__text {
+    font-size: 21px;
+    font-family: 'PFAgoraSlabPro-Light';
+    color: white;
+    line-height: 24px;
+    padding: 0 30px 30px 0;
+}
+
+.firstPage__callButton {
+    background-color: rgb(45 214 45);
+    display: block;
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 80px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 0px 5px 2px darkgreen;
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.firstPage__callButton:hover {
+    background-color: rgb(110, 228, 55);
+    transition: 100ms;
+}
+
+.firstPage__callButton:active {
+    background-color: rgb(144, 235, 99);
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px darkgreen;
+}
+
+.secondPage {
+    min-height: 70vh;
+    display: flex;
+}
+
+.secondPage__body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: space-between;
+    padding: 40px 50px;
+}
+
+.secondPage__title {
+    color: rgb(51,51,51);
+    font-size: 41px;
+    font-family: 'Roboto';
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom:30px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.secondPage__text {
+    font-family: 'PFAgoraSlabPro-Light';
+    font-size: 18px;
+    text-align: center;
+    color: #6f6f6f;
+    padding-bottom: 60px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.secondPage__factsWrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 2;
+}
+
+.secondPage__fact {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.factPicture {
+    background-image: url('./scr/img/numbers-item.png');
+    height: 186px;
+    width: 186px;
+    font-size: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #4a4a4a;
+    font-family: 'Roboto';
+    font-weight: 900;
+}
+
+.factText {
+    text-align: center;
+    color: #6f6f6f;
+    font-family: 'PFAgoraSlabPro-Light';
+    font-size: 18px;
+    width: 186px;
+}
+
+.thirdPage {
+    min-height: 80vh;
+    background: url('./scr/img/back3Page.jpg') top / cover no-repeat;
+    display: flex;
+}
+
+.thirdPage__body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 30px 0 50px 0;
+}
+
+.thirdPage__mainOfferWrapper {
+    width: 500px;
+}
+
+.thirdPage__textTitle {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: rgb(51,51,51);
+    text-transform: uppercase;
+    padding: 0 50px 15px 0;
+}
+
+.thirdPage__text_first, .thirdPage__text_second {
+    font-size: 17px;
+    font-family: 'PFAgoraSlabPro-Light';
+    color: #4a4a4a;;
+    line-height: 24px;
+    padding: 0 30px 30px 0;
+}
+
+.thirdPage__text_first {
+    padding: 20px 30px 15px 0 ;
+}
+
+.thirdPage__callButton {
+    background-color: rgb(255, 151, 24);
+    display: block;
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 80px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 0px 5px 2px rgb(180, 119, 4);
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.thirdPage__callButton:hover {
+    background-color: rgb(255, 167, 60);
+    transition: 100ms;
+}
+
+.thirdPage__callButton:active {
+    background-color: rgb(255, 184, 102);
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px rgb(180, 119, 4);
+}
+
+
+.fourthPage {
+    min-height: 70vh;
+    background: url('./scr/img/Page4Back.png') top / cover no-repeat;
+    display: flex;
+    margin-top: -50px;
+}
+
+.fourthPage__body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: left;
+    align-items: center;
+    padding: 60px 0 60px 0;
+}
+
+.fourthPage__mainOfferWrapper {
+    width: 630px;
+}
+
+.fourthPage__textTitle {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color: white;
+    text-transform: uppercase;
+    padding: 0 50px 15px 0;
+}
+
+.fourthPage__text {
+    font-size: 17px;
+    font-family: 'PFAgoraSlabPro-Light';
+    color: white;
+    line-height: 24px;
+    padding: 20px 30px 30px 0;
+}
+
+.fourthPage__callButton {
+    display: block;
+    background-color: rgb(255, 151, 24);
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 80px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 0px 5px 2px rgb(180, 119, 4);
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.fourthPage__callButton:hover {
+    background-color: rgb(255, 167, 60);
+    transition: 100ms;
+}
+
+.fourthPage__callButton:active {
+    background-color: rgb(255, 184, 102);
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px rgb(180, 119, 4);
+}
+
+.fourthPage__imgWrapper {
+    width: 40%;
+}
+
+
+.fifthPage {
+    min-height: 80vh;
+    background: url('./scr/img/Page5Back.png') top / cover no-repeat;
+    display: flex;
+    margin-top: -85px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.fifthPage__body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 150px 20px 150px;
+}
+
+.fifthPage__mainOfferWrapper {
+    width: 500px;
+    margin-right: 50px;
+}
+
+.fifthPage__textTitle {
+    font-size: 40px;
+    font-family: 'Roboto';
+    color:white;
+    text-transform: uppercase;
+    padding: 0 0 15px 0;
+    text-align: end;
+}
+
+.form {
+    font-family: 'PFAgoraSlabPro-Light';
+}
+
+.fifthPage__form {
+
+}
+
+.form__inputName {
+    height: 70px;
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    font-size: 20px;
+    border: white 4px solid;
+}
+
+.fifthPage__inputPhone {
+
+}
+
+.form__inputPhone {
+    height: 70px;
+    width: 400px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 20px 30px;
+    font-size: 20px;
+    border: white 4px solid;
+}
+
+
+
+.form__inputPhone:hover, .form__inputName:hover {
+    border:  rgb(146, 185, 230) 4px solid;
+}
+
+.form__inputPhone:focus, .form__inputName:focus {
+    /* background-color: rgb(236, 236, 236);*/
+    border: rgb(221, 182, 10) 4px solid;
+}
+
+.fifthPage__inputPhone {
+
+}
+
+
+.fifthPage__callButton {
+    display: block;
+    background-color: rgb(255, 151, 24);
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 80px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 0px 5px 2px rgb(180, 119, 4);
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.fifthPage__callButton:hover {
+    background-color: rgb(255, 167, 60);
+    transition: 100ms;
+}
+
+.fifthPage__callButton:active {
+    background-color: rgb(255, 184, 102);
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px rgb(180, 119, 4);
+}
+
+.fifthPage__imgWrapper {
+    transform: translateY(40px);
+}
+
+.fifthPage__pic {
+
+}
+
+.feedbackPage {
+    min-height: 70vh;
+    background: url(./scr/img/feedbackBack.png) top / cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.feedbackPage:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50px;
+    z-index: 3;
+    margin-top: -55px;
+    background: url(./scr/img/feedbackTopBack.png) top / cover no-repeat;
+}
+
+.feedbackPage__body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    padding: 60px 20px 60px 20px;
+}
+
+.feedbackPage__textTitle {
+    font-size: 45px;
+    font-family: 'Roboto';
+    color: #4a4a4a;
+    text-transform: uppercase;
+    padding: 0;
+    align-self: flex-start;
+    margin-bottom: 40px;
+}
+
+.feedbackPage__contentWrapper {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.feedbackPage__feedbackWrapper {
+    margin-top: 50px;
+}
+
+.feedbackPage__slider {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.slidesWrapper {  
+    width: 560px;
+    max-height: 400px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+
+.slides {
+    display: flex;
+    flex-direction: row;
+    transition: transform 1s;
+}
+
+.slide {
+    min-width: 520px;
+    border: #e2e2e2 2px solid;
+    border-radius: 0px;
+    background-color: white;
+    /*overflow-y: scroll;*/
+    padding: 40px 60px;
+    position: relative;
+    margin: 0 20px 0 0;
+}
+
+.slide::before {
+    content: url("./scr/img/feedbackIcon.jpg");
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(60px, -50%); 
+
+}
+
+.slide__text {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.slide__author {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    font-style: italic;
+}
+
+.sliderButtonsWrapper {
+    align-self: center;
+}
+
+.sliderButtons {
+    width: 60px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sliderButton {
+    background-color: #e2e2e2;
+    border-radius: 6px;
+    height: 11px;
+    width: 11px;
+    transition: 200ms;
+}
+
+.sliderButton:hover {
+    background-color: rgb(250, 188, 166);
+    transition: 200ms;
+}
+
+.activeSliderButton {
+    background-color: coral;
+    transition: 200ms;
+}
+
+
+.feedbackPage__callButton {
+    background-color: rgb(255, 151, 24);
+    display: block;
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    border-radius: 10px;
+    line-height: 80px;
+    font-size: 25px;
+    color: white;
+    box-shadow: 0px 5px 2px rgb(180, 119, 4);
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.feedbackPage__callButton:hover {
+    background-color: rgb(255, 167, 60);
+    transition: 100ms;
+}
+
+.feedbackPage__callButton:active {
+    background-color: rgb(255, 184, 102);
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px rgb(180, 119, 4);
+}
+
+.feedbackPage__imgWrapper {
+    
+}
+
+.feedbackPage__pic {
+    object-fit: contain;
+    width: 550px;
+    transform: scale(1.15);
+}
+
+
+.pricePage {
+    min-height: 70vh;
+    margin-top: -70px;
+}
+
+.pricePage__header {
+    width: 100%;
+    display: flex;
+    flex-direction: column; 
+    background: url('./scr/img/price-bg.jpg') top / cover no-repeat;
+    height: 560px;
+    align-content: center;
+}
+
+.pricePage_body {
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0px 20px 60px 20px;
+}
+
+
+.pricePage__headerTitle {
+    font-size: 45px;
+    font-family: 'Roboto';
+    color: white;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: center;
+    margin-top: 11vw;
+}
+       
+.pricePage__headerText {
+    font-size: 17px;
+    font-family: 'PFAgoraSlabPro-Light';
+    color: white;
+    line-height: 24px;
+    padding: 20px 30px 100px 0;
+    text-align: center;
+    width: 1180px;
+    align-self: center;
+}
+
+.pricePage__priceTable {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.pricePage__priceTable table {
+    margin: 0 auto;
+}
+
+
+.pricePage__priceTable table, td {
+    border: rgb(89, 150, 193) 2px solid;
+    border-collapse: collapse;
+}
+
+.pricePage__priceTable th, td {
+    padding: 10px;
+    text-align: center;
+    font-weight: 800;
+} 
+
+.pricePage__priceTable th {
+   background: linear-gradient(57deg, rgb(50, 118, 166) 0%, rgb(29, 94, 140) 100%);
+   color: white;
+   padding: 14px 30px 14px 30px;
+   font-size: 18px;
+} 
+
+.pricePage__priceTable table tr:nth-child(2) th {
+    font-weight: 500;
+}
+
+
+.pricePage__offers {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: row; 
+    background: url('./scr/img/priceBack.jpg') center / contain no-repeat;
+    align-content: stretch;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.pricePage__offerWrapper {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.pricePage__offer {
+    margin-top: 30px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.pricePage__offer ul {
+    padding: 10px 20px 20px 50px;
+}
+
+.pricePage__offer li {
+    padding: 5px 0 5px 0;
+    color: white;
+    line-height: 17px;
+    letter-spacing: 1px;
+    font-family: 'PFAgoraSlabPro-Light';
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.pricePage__offer li::before {
+    content: '';
+    background: url(./scr/img/tick.png) center / contain;
+    height: 20px;
+    position: absolute;
+    width: 20px;
+    transform: translate(-140%, -10%);
+} 
+
+.offer1 {
+ margin-bottom: 30px;
+ background: url('./scr/img/price-1.png') center / cover no-repeat;
+}
+
+
+.offer2 {
+    background: url('./scr/img/price-2.png') center / cover no-repeat;
+}
+
+.offerTitle {
+    font-size: 27px;
+    font-family: 'Roboto';
+    color: white;
+    line-height: 30px;
+    align-self: center;
+    font-weight: 900;
+    padding: 20px 0 20px 30px;
+    text-transform: uppercase;
+}
+
+.offerTitle::before {
+    content: '';
+    background: url(./scr/img/big-time.png) center / contain;
+    height: 35px;
+    position: absolute;
+    width: 35px;
+    transform: translate(-120%, -10%);
+}
+
+.pricePage__addInfo {
+    color: #164d74;
+    padding-left: 50px;
+    position: relative;
+    letter-spacing: 1px;
+    font-size: 13px;
+    font-family: 'PFAgoraSlabPro-Light';
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.pricePage__addInfo::before {
+    content: '';
+    background-color: red;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    transform: translate(-180%, 0);
+    border-radius: 10px;
+}
+
+.pricePage__addInfo::after {
+    content: '';
+    background-color: white;
+    height: 6px;
+    width: 6px;
+    position: absolute;
+    border-radius: 10px;
+    top: 0;
+    left: 0;
+    transform: translate(21px, 7px);
+}
+
+.footer {
+    width: 100%;
+    height: fit-content;
+}
+
+.footer::before {
+    content: '';
+    background: url('./scr/img/footer-bg.png') top / cover no-repeat;
+    height: 50px;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-100%);
+    z-index: 6;
+}
+
+.footer__wrapper {
+    max-width: 1180px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+
+.footer__body {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 10px 0 20px 0;
+}
+
+.footerMenu {
+
+}
+
+
+.footerMenu__list {
+    display: flex;
+}
+
+.footerMenu__item {
+    padding: 0 20px 0 0 ;
+}
+
+
+.footerMenu__link {
+    color: black;
+    font-size: 16px;
+    font-family: 'PFAgoraSlabPro-Regular';
+    padding: 8px 5px;
+    transition: 200ms;
+}
+
+.footerMenu__link:hover {
+    color: #3a3a3a;
+    transition: 200ms;
+}
+
+.footer__contacts {
+    display: flex;
+    align-items: center;
+}
+
+.footerPhone {
+    font-size: 24px;
+    color: black;
+    font-family: 'PFAgoraSlabPro-Bold';
+    letter-spacing: 0px;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease 0s;
+}
+
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content {
+    transform: translateY(0);
+    opacity: 1;
+
+}
+
+.popup__closeArea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.popup:target .popup__closeArea {
+   
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 10px;
+    transition: all 0.3s ease 0s;
+}
+
+.popup__content {
+    background-color: white;
+    color: black;
+    max-width: 800px;
+    padding: 80px 120px;
+    position: relative;
+    opacity: 1;
+    transform: translateY(-100%);
+    transition: all 0.3s ease 0s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.popup__title {
+    font-size: 35px;
+    margin: 0 0 20px 0;
+    color:darkslategray;
+    font-weight: 900;
+}
+
+.popup__closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+.popup__inputPhoneCaption {
+    margin: 0 0 5px 0;
+}
+
+.popup__inputPhone {
+    width: 100%;
+    display: block;
+    border: gray 2px solid;
+    font-size: 15px;
+    line-height: 15px;
+    color: black;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.popup__inputPhone:hover {
+    border-color: rgb(208, 208, 208);
+}
+
+.popup__inputPhone:focus {
+   /* background-color: rgb(236, 236, 236);*/
+    border-color: rgb(208, 232, 196);
+}
+
+.popup__sendButton {
+    display: block;
+    width: 100%;
+    height: 50px;
+    background-color: #ea7f07;
+    border-radius: 10px;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0px 3px 2px rgb(160, 82, 8);
+    font-family: 'PFAgoraSlabPro-Regular';
+    font-weight: 900;
+    transition: 100ms;
+    cursor: pointer;
+}
+
+.popup__sendButton:hover {
+    background-color: rgb(255, 175, 71);
+    transition: 100ms;
+}
+
+.popup__sendButton:active {
+    background-color: rgb(255, 197, 122);
+    transform: translateY(2px);
+    transition: 100ms;
+    box-shadow: 0px 1px 2px rgb(160, 82, 8);
+}
