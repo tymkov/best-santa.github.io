@@ -1,2 +1,2 @@
-# best-santa.gitub.io
+# best-santa.github.io
 Santa Page
